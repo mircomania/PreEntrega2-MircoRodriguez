@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand:wght@300&family=Raleway:wght@100&family=Roboto:wght@100&display=swap');
+
+/* font-family: 'Dancing Script', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif; 
+
+CE8884 • FBD3C4 • FFF5ED • E4CCBC
+694E52 • F3E2C7 • FCF5E5 • F8CBC4
+885157 • DFD8CB • F8F3E6 • C6CEBE*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    width: 100%;
+    height: 130px;
+    background-color: #885157;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 50px;
+}
+
+.logo a {
+    font-family: 'Quicksand', sans-serif;
+    color: bisque;
+    text-decoration: none;
+}
+
+.barra {
+    padding-top: 10px;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+.barra a {
+    font-family: 'Raleway', sans-serif;
+    color: bisque;
+    text-decoration: none;
+}
+
+.barra a:hover {
+    color: black;
+}
+
+.barra ul li {
+    display: inline-block;
+}
+
+main {
+    padding-top: 120px;
+    background-color: #DFD8CB;
+    width: 100%;
+}
+
+.presentacion { 
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    padding: 30px;
+    font-size: 45px;
+}
+
+.carruselB {
+    padding: 10px;
+}
+
+.callCarrusel {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.callCarrusel a {
+    background-color: #afa2a280;
+    color: #885157;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.callCarrusel a:hover {
+    color: #000000;
+}
+
+.divPag {
+    height: 100px;
+    padding-top: 20px;
+}
+
+.noticia { 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.noticia img {
+    max-width: 100%;
+    height: auto;
+}
+
+.noticia p {
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.agendaIndex {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.agendaIndex a {
+    background-color: #afa2a280;
+    color: #885157;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.agendaIndex a:hover {
+    color: #000000;
+}
+
+/* GALERIA */
+
+.cabezera {
+    padding: 10px;
+}
+
+.tituloPag {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 60px;
+    padding-top: 25px;
+}
+
+.subtiPag {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    padding-left: 30px;
+}
+
+.galeriaBox {
+    padding: 10px;
+}
+
+.categoriaGaleria {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.galeriaBox img {
+    max-width: 100%;
+    height: auto;
+}
+
+.callGaleria {
+    padding-top: 10px;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.callGaleria a {
+    background-color: #afa2a280;
+    color: #885157;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.callGaleria a:hover {
+    color: #000000;
+}
+
+/* MISION */
+
+.misionBox {
+    font-family: 'Roboto', sans-serif;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BOTON LEER MAS */
+
+.loremExtra {
+    display: none;
+}
+
+input[type="checkbox"] {
+    height: 1em;
+    display: block;
+    appearance: none;
+}
+
+.container label {
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px;
+    position: relative;
+    padding: 1em;
+    background-color: #885157;
+    color:bisque;
+    cursor: pointer;
+}
+
+label::before {
+    content: 'Leer Mas';
+}
+
+input[type="checkbox"]:checked ~ label::before {
+    content: 'Leer Menos';
+}
+
+.dots:has(~ input[type="checkbox"]:checked) {
+    display: none;
+}
+
+.loremExtra:has(~ input[type="checkbox"]:checked) {
+    display: inline;
+}
+
+/* TERMINA BOTON LEER MAS */
+
+.fotoMision {
+    padding: 10px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.fotoMision img {
+    max-width: 100%;
+}
+
+/* BLOG */
+
+.blogBox {
+    padding: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    grid-gap: 40px;
+    width: 100%;
+    height: auto;
+    background-color:#DFD8CB;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 400px);
+}
+
+.itemblog {
+    border: 1px solid #000000;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.loremBlog {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #dfd8cbaf;
+    padding: 10px;
+}
+
+.loremBlog {
+    margin: 0;
+}
+
+.itemblog1 {
+    background-image: url(../IMG/niños/Card\ Blog\ 2.JPG);
+}
+
+.itemblog2 {
+    background-image: url(../IMG/bebes/Card\ Blog\ 1.JPG);
+}
+
+.itemblog3 {
+    background-image: url(../IMG/niños/Card\ Blog\ 6.jpg);
+}
+
+.itemblog4 {
+    background-image: url(../IMG/novios/Card\ Blog\ 3.JPG);
+}
+
+.itemblog5 {
+    background-image: url(../IMG/pymes/Card\ Blog\ 4.JPG);
+}
+
+.itemblog6 {
+    background-image: url(../IMG/pymes/Card\ Blog\ 5.JPG);
+}
+
+/* CONTACTO */
+
+.formulario {
+    font-family: 'Roboto', sans-serif;
+    padding: 50px;
+}
+
+.formDatos1 {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.formulario p {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    padding-top: 500px;
+    background-color: #885157;
+    padding: 10px;
+    text-align: center;
+}
+
+.logoFooter {
+    font-family: 'Quicksand', sans-serif;
+}
+
+footer a {
+    width: 20%;
+    color: bisque;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.redes a i:hover {
+    color: black;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+/* BOTON SUBIR */
+
+.subir {
+    height: 30px;
+    width: 30px;
+    background-color: #F8F3E6;
+    border-radius: 50%;
+    position: fixed;
+    right: 10px;
+    bottom: 18px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+    color: #000000;
+    box-shadow: 0 0 5px #000000;
+}
+
+/* medidas queries */
+
+@media only screen and (min-width:768px) {
+    header {
+        height: 200px;
+        padding: 10px;
+    }
+    
+    .logo {
+        font-size: 80px;
+    }
+    
+    .barra {
+        padding-top: 10px;
+        font-size: 26px;
+    }
+
+    main {
+        padding-top: 200px;
+    }
+    
+    .presentacion {
+        padding: 30px;
+        font-size: 55px;
+    }
+    
+    .carruselB {
+        padding: 80px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+    }
+    
+    .callCarrusel a {
+        padding: 10px 50px;
+        font-size: 26px;
+    }
+
+    .noticia {
+        padding: 80px;
+        padding-top: 40px;
+        padding-bottom: 0;
+    }
+    
+    .noticia p {
+        font-size: 16px;
+        padding-top: 20px;
+    }
+    
+    .agendaIndex a {
+        padding: 10px 50px;
+        font-size: 26px;
+    }
+
+    /* GALERIA */
+
+    .cabezera {
+        padding: 20px;
+    }
+    
+    .tituloPag {
+        font-size: 80px;
+        padding-top: 35px;
+    }
+    
+    .subtiPag {
+        font-size: 30px;
+        padding-left: 30px;
+    }
+    
+    .galeriaBox {
+        padding: 80px;
+    }
+
+    .categoriaGaleria h3 {
+        font-size: 50px;
+        padding-bottom: 20px;
+    }
+    
+    .callGaleria {
+        padding-top: 20px;
+    }
+    
+    .callGaleria a {
+        padding: 10px 50px;
+        font-size: 26px;
+    }
+
+    /* MISION */
+
+    .misionBox {
+        padding: 80px;
+}
+
+    /*BLOOG */
+
+    .blogBox {
+        padding: 80px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 400px);
+    }
+
+}
+
+/* PANTALLA 1200px */
+
+@media only screen and (min-width:1200px) {
+    header {
+        height: 220px;
+        padding: 10px;
+    }
+    
+    .logo {
+        font-size: 100px;
+        padding-left: 150px;
+    }
+    
+    .barra {
+        padding-top: 10px;
+        font-size: 26px;
+        padding-right: 150px;
+    }
+
+    main {
+        padding-top: 280px;
+    }
+    
+    .presentacion {
+        padding: 30px;
+        font-size: 70px;
+    }
+    
+    .carruselB {
+        padding: 190px;
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+    
+    .callCarrusel a {
+        padding: 10px 150px;
+        font-size: 46px;
+    }
+
+    .noticia {
+        padding: 190px;
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+    
+    .noticia p {
+        font-size: 18px;
+        padding-top: 40px;
+    }
+    
+    .agendaIndex a {
+        padding: 10px 130px;
+        font-size: 46px;
+    }
+
+    /* GALERIA */
+
+    .cabezera {
+        padding: 30px;
+        padding-top: 5px;
+    }
+    
+    .tituloPag {
+        font-size: 120px;
+        padding-top: 25px;
+        padding-left: 180px;
+    }
+    
+    .subtiPag {
+        font-size: 50px;
+        padding-left: 220px;
+    }
+    
+    .galeriaBox {
+        padding: 190px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .categoriaGaleria h3 {
+        font-size: 60px;
+        padding-bottom: 30px;
+    }
+    
+    .callGaleria {
+        padding-top: 40px;
+    }
+    
+    .callGaleria a {
+        padding: 10px 150px;
+        font-size: 46px;
+    }
+
+    /* MISION */
+
+    .misionBox {
+        padding: 190px;
+        padding-top: 50px;
+        padding-bottom: 100px;
+}
+
+/*BLOOG */
+
+.blogBox {
+    padding: 190px;
+    padding-top: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 400px);
+}
+
+    /* FOOTER */
+
+    footer {
+        padding-top: 500px;
+        padding: 10px;
+    }
+    
+    footer a {
+        width: 20%;
+        font-size: 50px;
+    }
+    
+    footer p {
+        font-size: 18px;
+    }
+}
